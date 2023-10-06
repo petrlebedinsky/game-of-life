@@ -1,0 +1,10 @@
+<ruleset name="PHP_CodeSniffer">
+  <rule ref="PSR12"/>
+
+  <arg name="cache"/>
+  <arg name="colors"/>
+  <arg value="sp"/>
+
+  <file>src</file>
+  <file>tests</file>
+</ruleset>

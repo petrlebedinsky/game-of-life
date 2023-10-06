@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF8"?>
+<life>
+    <world>
+        <dimension>-14</dimension> <!-- Dimension of the square "world" -->
+        <speciesCount>3</speciesCount> <!-- Number of distinct species -->
+        <iterationsCount>20000</iterationsCount> <!-- Number of iterations to be calculated -->
+    </world>
+
+    <organisms>
+        <organism>
+            <x_pos>1</x_pos> <!-- x position -->
+            <y_pos>2</y_pos> <!-- y position -->
+            <species>veverka</species> <!-- Species type -->
+        </organism>
+    </organisms>
+</life>

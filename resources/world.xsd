@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Definition for the main "life" element -->
+    <xs:element name="life">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="world"/>
+                <xs:element ref="organisms"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Definition for the "world" element -->
+    <xs:element name="world">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="dimension" type="xs:positiveInteger"/>
+                <xs:element name="speciesCount" type="xs:positiveInteger"/>
+                <xs:element name="iterationsCount" type="xs:positiveInteger"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Definition for the "organisms" element -->
+    <xs:element name="organisms">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="organism" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Definition for the "organism" element -->
+    <xs:element name="organism">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="x_pos" type="xs:positiveInteger"/>
+                <xs:element name="y_pos" type="xs:positiveInteger"/>
+                <xs:element name="species" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

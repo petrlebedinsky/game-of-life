@@ -1,0 +1,17 @@
+imports:
+  - { resource: services.yaml }
+
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+
+  App\World\Service\Input\Xml\Validator:
+    public: true
+    arguments:
+      $xsdFilePath: '%xsdFilePath%'
+
+  App\World\Service\Input\Xml\SimpleParser:
+    public: true
+    arguments:
+      $validateOrganismPositions: '%validateOrganismPositions%'
